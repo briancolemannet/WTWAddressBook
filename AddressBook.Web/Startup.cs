@@ -11,6 +11,7 @@ using AddressBook.Domain.Repositories;
 using AddressBook.Domain.Data;
 using AddressBook.Domain.Services;
 using AddressBook.Web.Data;
+using AutoMapper;
 
 namespace AddressBook.Web
 {
@@ -36,6 +37,7 @@ namespace AddressBook.Web
             services.AddScoped<IContactsRepository, ContactsRepository>();
             services.AddScoped<ContactsService>();
             services.AddSingleton<DataContext>();
+            services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

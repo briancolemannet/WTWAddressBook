@@ -10,5 +10,8 @@ namespace AddressBook.Domain.Repositories
     public interface IContactsRepository
     {
         List<Contact> GetAllContacts();
+        void AddContact(Contact contact);
+        void UpdateContact(Contact contact);
+        Contact GetContact(int contactId);
     }
 }
