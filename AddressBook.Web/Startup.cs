@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using AddressBook.Domain.Repositories;
+using AddressBook.Domain.Data;
+using AddressBook.Web.Data;
 
 namespace AddressBook.Web
 {
@@ -29,6 +32,8 @@ namespace AddressBook.Web
         {
             // Add framework services.
             services.AddMvc();
+            services.AddScoped<IContactsRepository, ContactsRepository>();
+            services.AddSingleton<DataContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +41,7 @@ namespace AddressBook.Web
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            SeedDataContext.Seed(app.ApplicationServices.GetService<DataContext>());
 
             if (env.IsDevelopment())
             {
@@ -47,14 +53,9 @@ namespace AddressBook.Web
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            app.UseFileServer();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvc();
         }
     }
 }

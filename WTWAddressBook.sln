@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Web", "AddressBook.Web\AddressBook.Web.csproj", "{BD4D1448-2935-43C3-98C1-4580627E0AFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Domain", "AddressBook.Domain\AddressBook.Domain.csproj", "{3938D22E-4384-4092-BBE3-E9EC0674DAB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BD4D1448-2935-43C3-98C1-4580627E0AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD4D1448-2935-43C3-98C1-4580627E0AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD4D1448-2935-43C3-98C1-4580627E0AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3938D22E-4384-4092-BBE3-E9EC0674DAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3938D22E-4384-4092-BBE3-E9EC0674DAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3938D22E-4384-4092-BBE3-E9EC0674DAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3938D22E-4384-4092-BBE3-E9EC0674DAB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
