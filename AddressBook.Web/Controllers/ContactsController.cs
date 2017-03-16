@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AddressBook.Domain.Repositories;
+using AddressBook.Domain.Services;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +10,20 @@ using System.Threading.Tasks;
 namespace AddressBook.Web.Controllers
 {
     [Route("api/contacts")]
-    public class ContactsController:Controller
+    public class ContactsController : Controller
     {
-        [HttpGet("")]
-        public IActionResult GetContact()
+        private readonly ContactsService _contactsService;
+
+        public ContactsController(ContactsService contactsService)
         {
-            throw new NotImplementedException();
+            _contactsService = contactsService;
+        }
+
+        [HttpGet("")]
+        public IActionResult GetContacts()
+        {
+            var contacts = _contactsService.GetAllContacts();
+            return Ok(new { contacts });
         }
 
         [HttpPost("")]
@@ -22,7 +32,7 @@ namespace AddressBook.Web.Controllers
             throw new NotImplementedException();
         }
 
-        [HttpPost("{contactId")]
+        [HttpPost("{contactId}")]
         public IActionResult UpdateContact()
         {
             throw new NotImplementedException();

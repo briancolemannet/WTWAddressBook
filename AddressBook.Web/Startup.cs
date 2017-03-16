@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using AddressBook.Domain.Repositories;
 using AddressBook.Domain.Data;
+using AddressBook.Domain.Services;
 using AddressBook.Web.Data;
 
 namespace AddressBook.Web
@@ -33,6 +34,7 @@ namespace AddressBook.Web
             // Add framework services.
             services.AddMvc();
             services.AddScoped<IContactsRepository, ContactsRepository>();
+            services.AddScoped<ContactsService>();
             services.AddSingleton<DataContext>();
         }
 

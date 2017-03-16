@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AddressBook.Domain.Entities;
 
 namespace AddressBook.Domain.Repositories
 {
@@ -16,5 +17,9 @@ namespace AddressBook.Domain.Repositories
             _dataContext = dataContext;
         }
 
+        public List<Contact> GetAllContacts()
+        {
+            return _dataContext.Contacts;
+        }
     }
 }
