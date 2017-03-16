@@ -45,7 +45,7 @@ namespace AddressBook.Web.Controllers
 
             var contact = _mapper.Map<Contact>(model);
             _contactsService.AddContact(contact);
-            return Ok(new { contact });
+            return CreatedAtAction("GetContact", new { contactId = contact.Id }, new { contact });
         }
 
         [HttpPost("{contactId}")]

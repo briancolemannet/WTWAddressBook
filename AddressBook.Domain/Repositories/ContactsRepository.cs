@@ -31,11 +31,7 @@ namespace AddressBook.Domain.Repositories
 
         public void UpdateContact(Contact contact)
         {
-            var original = _dataContext.Contacts.SingleOrDefault(c => c.Id == contact.Id);
-            if (original == null)
-            {
-                throw new ObjectNotFoundException();
-            }
+            var original = _dataContext.Contacts.Single(c => c.Id == contact.Id);
 
             original.Address = contact.Address;
             original.Email = contact.Email;
@@ -45,7 +41,7 @@ namespace AddressBook.Domain.Repositories
 
         public Contact GetContact(int contactId)
         {
-            var contact = _dataContext.Contacts.SingleOrDefault(c => c.Id == contactId);
+            var contact = _dataContext.Contacts.Single(c => c.Id == contactId);
             return contact;
         }
     }
