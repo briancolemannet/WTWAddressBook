@@ -13,7 +13,7 @@ class ContactList extends Component {
 
   renderContact(contact) {
     return (
-      <Link to="/contacts" className="list-group-item">{contact.name}</Link>
+      <Link key={contact.id} to={`/contacts/${contact.id}`} className="list-group-item">{contact.name}</Link>
     );
   }
 

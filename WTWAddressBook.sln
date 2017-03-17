@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Web", "AddressB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Domain", "AddressBook.Domain\AddressBook.Domain.csproj", "{3938D22E-4384-4092-BBE3-E9EC0674DAB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBook.Domain.Tests", "AddressBook.Domain.Tests\AddressBook.Domain.Tests.csproj", "{6ADEA203-B6F4-458B-9D71-6E1C7BB80DC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3938D22E-4384-4092-BBE3-E9EC0674DAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3938D22E-4384-4092-BBE3-E9EC0674DAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3938D22E-4384-4092-BBE3-E9EC0674DAB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ADEA203-B6F4-458B-9D71-6E1C7BB80DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADEA203-B6F4-458B-9D71-6E1C7BB80DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADEA203-B6F4-458B-9D71-6E1C7BB80DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADEA203-B6F4-458B-9D71-6E1C7BB80DC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

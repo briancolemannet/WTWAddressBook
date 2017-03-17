@@ -9,6 +9,7 @@ import { Router, Route, hashHistory } from 'react-router';
 import App from './App';
 import ContactList from './components/contact-list';
 import AddContact from './components/add-contact';
+import ContactDetail from './components/contact-detail';
 import addressBookApp from './reducers';
 import './index.css';
 
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <Route path="/contacts" component={ContactList} />
         <Route path="/add" component={AddContact} />
+        <Route path="/contacts/:contactId" component={ContactDetail} />
       </Route>
     </Router>
   </Provider>,
