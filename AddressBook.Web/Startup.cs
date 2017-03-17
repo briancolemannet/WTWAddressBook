@@ -57,6 +57,12 @@ namespace AddressBook.Web
                 app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins("http://localhost:3000")
+                    .AllowAnyHeader();
+            });
+
             app.UseFileServer();
 
             app.UseMvc();
